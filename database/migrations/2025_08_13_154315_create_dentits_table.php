@@ -13,21 +13,20 @@ return new class extends Migration
     {
         Schema::create('dentits', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Name');
+            $table->string('name');
             $table->string('record');
             $table->string('address');
             $table->string('gender');
             $table->string('age');
-            $table->string('P_Birth');
-            $table->string('Nationality');
-            $table->string('Email');
-            $table->string('Allergies');
+            $table->string('p_Birth');
+            $table->string('nationality');
+            $table->string('email');
+            $table->string('allergies');
             $table->string('telephone');
-            $table->string('Speciality');
-            $table->string('Ethnicity');
-            $table->string('Country');
-            $table->string('Municipality');
             $table->string('speciality');
+            $table->string('ethnicity');
+            $table->string('country');
+            $table->string('municipality');
             $table->timestamps();
         });
     }

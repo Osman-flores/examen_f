@@ -13,21 +13,21 @@ return new class extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
               $table->increments("id");
-            $table->String ('name',255 );
-            $table->String ('identification',20)->unique();
-            $table->String ('p_Birth',255);
+            $table->string ('name',255 );
+            $table->string ('identification',20)->unique();
+            $table->string ('p_Birth',255);
             $table->integer ('age');
-            $table->String ('addres',255);   
-            $table->String ('sex',10);
-            $table->String ('nationality',100);
-            $table->String ('ethnicity',100);
-            $table->String ('telephone',15);
-            $table->String ('departament',255);
-            $table->String ('responsible',45);
-            $table->String ('country',255);
-            $table->String ('mail',255);
-            $table->String ('municipality',100);
-            $table->String ('marital_status',20);
+            $table->string ('addres',255);   
+            $table->string ('sex',10);
+            $table->string ('nationality',100);
+            $table->string ('ethnicity',100);
+            $table->string ('telephone',15);
+            $table->string ('departament',255);
+            $table->string ('responsible',45);
+            $table->string ('country',255);
+            $table->string ('mail',255);
+            $table->string ('municipality',100);
+            $table->string ('marital_status',20);
 
 
             $table->timestamps();

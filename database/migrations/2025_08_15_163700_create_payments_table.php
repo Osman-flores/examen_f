@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_treatments', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('status');
-            $table->string('cost');
-            $table->string('payment_status');
-            $table->string('name_doctor');
-            $table->string('area');
+            $table->string('amountpaid');
+            $table->string('payment_date');
+            $table->string('payment_type');
+            
+             $table->integer('treatments_id')->unsigned();
+            $table->foreign('treatments_id')->references('id')->on('treatments')->onDelete('cascade')->onUpdate('cascade'); 
+
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_treatments');
+        Schema::dropIfExists('payments');
     }
 };

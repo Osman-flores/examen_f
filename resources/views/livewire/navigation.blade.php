@@ -63,18 +63,47 @@
     <ul class="navbar-nav mb-md-3">
       
 
-        <li class="nav-item {{ Request::route()->named('students.index') ? 'active' : '' }}">
-            <a class="nav-link {{ Request::route()->named('students.index') ? 'active' : '' }}"
-                href="{{ route('students.index') }}" wire:navigate>
-                <i class="fas fa-dove text-orange"></i> Estudiantes
+        <li class="nav-item {{ Request::route()->named('patients.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('patients.index') ? 'active' : '' }}"
+                href="{{ route('patients.index') }}" wire:navigate>
+                <i class="fas fa-dove text-orange"></i> Paciente
+            </a>
+        </li>
+                <li class="nav-item {{ Request::route()->named('dentits.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('dentits.index') ? 'active' : '' }}"
+                href="{{ route('dentits.index') }}" wire:navigate>
+                <i class="fas fa-dove text-orange"></i> dentista
             </a>
         </li>
 
-        <li class="nav-item {{ Request::route()->named('carrers.index') ? 'active' : '' }}">
-            <a class="nav-link {{ Request::route()->named('carrers.index') ? 'active' : '' }}"
-                href="{{ route('carrers.index') }}" wire:navigate>
-                <i class="fas fa-dove text-orange"></i> Carreras
+                <li class="nav-item {{ Request::route()->named('appointments.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('appointments.index') ? 'active' : '' }}"
+                href="{{ route('appointments.index') }}" wire:navigate>
+                <i class="fas fa-dove text-orange"></i> cita
+            </a>
+        </li>    
+
+                <li class="nav-item {{ Request::route()->named('dental-records.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('dental-records.index') ? 'active' : '' }}"
+                href="{{ route('dental-records.index') }}" wire:navigate>
+                <i class="fas fa-dove text-orange"></i> registro dental
             </a>
         </li>
+
+                <li class="nav-item {{ Request::route()->named('treatments.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('treatments.index') ? 'active' : '' }}"
+                href="{{ route('treatments.index') }}" wire:navigate>
+                <i class="fas fa-dove text-orange"></i> tratamiento
+            </a>
+        </li>
+
+            <li class="nav-item {{ Request::route()->named('payments.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('payments.index') ? 'active' : '' }}"
+                href="{{ route('payments.index') }}" wire:navigate>
+                <i class="fas fa-dove text-orange"></i> pagos
+            </a>
+        </li>
+
+
     </ul>
 </div>

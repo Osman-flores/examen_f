@@ -12,17 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dental_records', function (Blueprint $table) {
-            $table->incremets('id');
+            $table->increments('id');
             $table->string('date');
             $table->string('treatment');
             $table->string('progress');
             $table->string('allergiances');
             
-            $table->intenger('patient_id')->unsigned();
-            $table->foreign('patient_id')->references('id')->on('patient')->onDelete('cascade')->onUpdate('cascade'); 
+            $table->integer('patients_id')->unsigned();
+            $table->foreign('patients_id')->references('id')->on('patients')->onDelete('cascade')->onUpdate('cascade'); 
             
-            $table->intenger('treatment_id')->unsigned();
-            $table->foreign('treatment_id')->references('id')->on('treatment')->onDelete('cascade')->onUpdate('cascade'); 
+            $table->integer('treatments_id')->unsigned();
+            $table->foreign('treatments_id')->references('id')->on('treatments')->onDelete('cascade')->onUpdate('cascade'); 
 
 
             $table->timestamps();

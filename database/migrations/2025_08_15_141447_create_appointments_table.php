@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_appointments', function (Blueprint $table) {
+        Schema::create('appointments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('duration');
             $table->date('date');
@@ -21,11 +21,11 @@ return new class extends Migration
             $table->string('number_client');
 
 
-            $table->intenger('patients_id')->unsigned();
+            $table->integer('patients_id')->unsigned();
             $table->foreign('patients_id')->references('id')->on('patients')->onDelete('cascade')->onUpdate('cascade'); 
             
-            $table->intenger('dentists_id')->unsigned();
-            $table->foreign('dentists_id')->references('id')->on('dentists')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('dentits_id')->unsigned();
+            $table->foreign('dentits_id')->references('id')->on('dentits')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });
