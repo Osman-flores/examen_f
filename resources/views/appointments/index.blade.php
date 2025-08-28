@@ -32,8 +32,6 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-                                        
 									<th >Duration</th>
 									<th >Date</th>
 									<th >Treatment</th>
@@ -49,8 +47,6 @@
                                 <tbody>
                                     @foreach ($appointments as $appointment)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
-                                            
 										<td >{{ $appointment->duration }}</td>
 										<td >{{ $appointment->date }}</td>
 										<td >{{ $appointment->treatment }}</td>

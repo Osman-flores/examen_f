@@ -5,7 +5,7 @@
                 <label class="form-control-label" for="duration">Duracion</label>
                 <input type="text" id="duration" name="duration" class="form-control form-control-alternative"
                 placeholder="Ingresar duración"
-                value="{{ old('duration', $appointment->duration)}}">
+                value="{{ old('duration', $appointments->duration)}}">
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
                 <label class="form-control-label" for="date">Fecha</label>
                 <input type="date" id="date" name="date" class="form-control form-control-alternative"
                 placeholder="Ingresar fecha"
-                value="{{ old('date', $appointment->date)}}">
+                value="{{ old('date', $appointments->date)}}">
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
                 <label class="form-control-label" for="treatment">Tratamiento.</label>
                 <input type="text" id="treatment" name="treatment" class="form-control form-control-alternative"
                 placeholder="Ingresa tratamiento"
-                value="{{ old('treatment', $appointment->treatment)}}">
+                value="{{ old('treatment', $appointments->treatment)}}">
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
                 <label class="form-control-label" for="reason">razon.</label>
                 <input type="text" id="reason" name="reason" class="form-control form-control-alternative"
                 placeholder="Ingresar razón"
-                value="{{ old('reason', $appointment->reason)}}">
+                value="{{ old('reason', $appointments->reason)}}">
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
                 <label class="form-control-label" for="name_client">Nombre del cliente.</label>
                 <input type="text" id="name_client" name="name_client" class="form-control form-control-alternative"
                 placeholder="Ingresa su nombre"
-                value="{{ old('name_client', $appointment->name_client)}}">
+                value="{{ old('name_client', $appointments->name_client)}}">
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
                 <label class="form-control-label" for="number_client">Número del cliente.</label>
                 <input type="text" id="number_client" name="number_client" class="form-control form-control-alternative"
                 placeholder="Ingresa su número"
-                value="{{ old('number_client', $appointment->number_client)}}">
+                value="{{ old('number_client', $appointments->number_client)}}">
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@
                 <option dislabel selected>Seleccione un paciente</option>
                 @foreach($patients as $patient)
                     <option value="{{ $patient->id }}"
-                        {{ old('patients_id', $appointment->patients_id ?? '') == $patient->id ? 'selected' : '' }}>
+                        {{ old('patients_id', $appointments->patients_id ?? '') == $patient->id ? 'selected' : '' }}>
                         {{ $patient->name }}
                     </option>
                 @endforeach
@@ -91,7 +91,7 @@
                 <option dislabel selected>Seleccione un dentista</option>
                 @foreach($dentits as $dentist)
                     <option value="{{ $dentist->id }}"
-                        {{ old('dentits_id', $appointment->dentits_id ?? '') == $dentist->id ? 'selected' : '' }}>
+                        {{ old('dentits_id', $appointments->dentits_id ?? '') == $dentist->id ? 'selected' : '' }}>
                         {{ $dentist->name }}
                     </option>
                 @endforeach
